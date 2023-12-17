@@ -14,3 +14,10 @@
 `terraform plan -var "location=asia"`
 
 -> when you try to use both tfvars and options in command line, the option value will override the value of tfvars file.
+
+-> you can also use `sensitive` property inside the variable to make sure that the values are hidden from console output execution or terraform state file.
+
+```variable "api_key " {
+ description = "Custom application api key"
+ sensitive = true
+}```
