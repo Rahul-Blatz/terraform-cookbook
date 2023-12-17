@@ -23,6 +23,6 @@ variable "environment" {
 
 
 resource "azurerm_resource_group" "project1" {
-  name     = upper(format("RG-%s-%s",var.app_name,var.environment))
+  name     = var.environment == "Production" ? upper(format("RG-%s", var.app_name)) : upper(format("RG-%s-%s", var.app_name, var.environment))
   location = "asia"
 }
