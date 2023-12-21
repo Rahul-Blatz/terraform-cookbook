@@ -8,3 +8,4 @@
 
 - This will help in not create duplicate codes and write simple codes for high scaling like for many environments with many resources.
 
+- There are two kinds of structuring the files when scaling the terraform for different environments.
